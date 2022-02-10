@@ -7,6 +7,7 @@ import '@/i18n';
 import ErrorBoundary from '@/components/errorBoundary';
 import ScrollToTop from '@/components/scrollToTop';
 import Loadable from '@/components/loadable';
+import localStorage from '@/utils/localStorage';
 import routes from '@/config/routes';
 import { store } from '@/store';
 import Pol from '@/utils/polling';
@@ -18,7 +19,7 @@ import './index.scss';
 const locale = {
   'en-us': en_US,
   'zh-cn': zh_CN,
-}['zh-cn'];
+}[localStorage.get('lang', 'en-us')];
 
 async function render() {
   // 启动全局轮询

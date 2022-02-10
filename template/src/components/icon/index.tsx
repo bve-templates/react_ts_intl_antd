@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.scss';
+import icons from '@/assets/iconfont/iconfont.css';
 
 require(`@/assets/svgs`);
-require(`@/assets/iconfont/iconfont.css`);
 
 interface Icon {
   props: {
@@ -18,9 +18,9 @@ class Icon extends React.Component {
     const { className, onClick, type, style, ...restProps } = this.props;
     const classNames: string[] = [];
     if (className) {
-      classNames.push(className);
+      classNames.push(icons[className]);
       if (!type) {
-        classNames.push(styles.icon, 'iconfont');
+        classNames.push(styles.icon, icons.iconfont);
       }
     }
     if (type) {
