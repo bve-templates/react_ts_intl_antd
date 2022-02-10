@@ -207,7 +207,6 @@ module.exports = merge(
     resolve: require('./webpack/resolve'),
     plugins: [
       new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
-      new CopyWebpackPlugin([{ from: path.resolve(__dirname, 'lib') }]),
       // 处理HTML
       new HtmlWebpackPlugin({
         filename: 'index.html',
