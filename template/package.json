@@ -6,9 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --port 8080",
     "build": "cross-env NODE_ENV=production webpack",
-    "build:test": "cross-env NODE_ENV=test webpack",
-    "memory-fixed": "cross-env LIMIT=2048 increase-memory-limit",
-    "dll": "webpack --config webpack/dll.js"
+    "build:test": "cross-env NODE_ENV=test webpack"
   },
   "author": "{{ author }}",
   "license": "ISC",
