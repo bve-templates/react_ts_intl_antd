@@ -7,13 +7,12 @@ const pkg = require('../package.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const utils = require('./utils');
 
 module.exports = {
   // 环境变量
   mode: 'production',
   output: {
-    publicPath: 'https://nstatic.oss-accelerate.aliyuncs.com/web/',
+    publicPath: './',
     filename: '[name].[contenthash:5].js',
   },
   plugins: [

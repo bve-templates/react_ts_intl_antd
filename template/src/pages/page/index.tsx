@@ -31,6 +31,7 @@ function Page(props) {
         svg:
         <Icon type="test" />
       </Button>
+      <Button className={styles.btn}>环境变量：{process.env.BUILD_ENV}</Button>
     </div>
   );
 }

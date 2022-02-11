@@ -6,7 +6,7 @@
  */
 
 export type TasksType = {
-  [key: string]: (...args: Array<any>) => void;
+  [key: string]: (...args: Array<any>) => void | Promise<any>;
 };
 export type StatusType = {
   [key: string]: {
@@ -61,7 +61,7 @@ class Polling {
           // 异步方法
           this.setStatus(key, 'pending');
           fn()
-            .then(() => {
+            ?.then(() => {
               this.setStatus(key, 'fulfilled');
             })
             .catch(e => {
