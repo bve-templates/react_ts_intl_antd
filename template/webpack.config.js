@@ -226,7 +226,7 @@ module.exports = merge(
       }),
       // new HardSourceWebpackPlugin(),
     ],
-    devtool: false,
+    devtool: isDev ? 'source-map' : false,
     // externals: {
     //   react: 'React',
     //   'react-dom': 'ReactDOM',
