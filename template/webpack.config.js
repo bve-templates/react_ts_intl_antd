@@ -121,6 +121,7 @@ module.exports = merge(
               loader: 'css-loader',
               options: {
                 modules: {
+                  auto: /^(?!.*node_modules\/antd)/i,
                   localIdentName: isDev
                     ? '[path][name]__[local]'
                     : '[hash:base64:3]',
